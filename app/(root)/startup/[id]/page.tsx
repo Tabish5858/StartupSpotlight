@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 import { client } from "@/sanity/lib/client";
 import {
     PLAYLIST_BY_SLUG_QUERY,
@@ -45,10 +45,12 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             </section>
 
             <section className="section_container">
-                <img
+                <Image
                     src={post.image}
                     alt="thumbnail"
                     className="w-full h-auto rounded-xl"
+                    width={100}
+                    height={100}
                 />
 
                 <div className="space-y-5 mt-10 max-w-4xl mx-auto">
